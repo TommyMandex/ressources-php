@@ -1,0 +1,84 @@
+.fond
+{
+	background-color: rgb(230,230,230);
+}
+a , a:focus, a:active{
+	color:#07aaf5;
+}
+.list-group-item
+{
+	transition: all .9s ease-in-out;
+}
+.list-group-item:hover
+{
+	background-color: #07aaf5;
+	color: #df0631;
+	transform: scale(1.05);
+	transition: all .9s ease-in-out;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	background-color: rgb(245, 245, 245);
+}
+.nav-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #df0631;
+}
+
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
+    border: 1px solid #df0631;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+a:focus {
+    outline: none!important;
+}
+.lm_container {
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+	background-color: rgb(245, 245, 245);
+	padding: 20px;
+	text-align: justify;
+	border: 1px solid #df0631;
+    border-top: none!important;
+    margin-bottom: 90px;
+}
+.elmojitopseudo {
+	text-shadow: 2px 2px 0px black, 0px 0px 9px white, 0px 0px 10px white;
+	background-image:;
+	display: inline-block;
+	font-weight:bold;
+	color:#00FF00;
+	letter-spacing: 1px;
+	animation: mojito 2s ease infinite alternate;
+}
+@keyframes mojito {
+0% { color: #FF1919; }
+15% { color: #E019FF; }
+30% { color: #4F19FF; }
+45% { color: #19A7FF; }
+60% { color: #19FFDC; }
+75% { color: #65FF19; }
+90% { color: #FFE019; }
+}
+
+html, body {
+    height: 100%;
+    margin: 0; padding: 0;
+}
+body {
+    display : table;
+    width: 100%;
+}
+footer {
+    display : table-row;
+	background: #07aaf5;
+	border-top: 1px solid #df0631;
+}
+body {position: relative;}
+footer {position: absolute; bottom: 0; left: 0; right: 0}
+
+.basDePageCss {
+    padding: 9px; 
+	color: white;
+}
+.basDePageCss a {
+	color: #df0631;
+}

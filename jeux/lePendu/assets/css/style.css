@@ -1,0 +1,174 @@
+html, body {
+    height: 100%;
+    margin: 0; padding: 0;
+}
+body {
+    display : table;
+    width: 100%;
+	background: url(https://d1hw6n3yxknhky.cloudfront.net/022497769_prevstill.jpeg);
+	background-size: 100% 100%;
+	color: #c8c8c8;
+}
+footer {
+    display : table-row;
+	background: black;
+	border-top: 2px solid rgba(255,255,255,0.2);
+}
+body {position: relative;}
+footer {position: absolute; bottom: 0; left: 0; right: 0}
+
+.basDePageCss {
+    padding: 9px; 
+	color: white;
+}
+
+a { 
+	color: white;
+	text-decoration: none;
+}
+
+a:hover,  a:focus ,  a:active {
+	color: rgb(72, 132, 192);
+	text-decoration: none;
+}
+
+.MotAfficherCSS {
+	color: green; 
+	letter-spacing: 4.5px; 
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+#partiePendu .row {
+    padding: 20px 30px;
+}
+
+.dejaJouer {
+	color: red;
+	font-weight: bold;
+}
+
+td{
+	width:300px;
+}
+
+h1 {
+    color: white;
+    text-shadow: 1px 1px 0px black;
+    box-shadow: 0px 3px 0px rgb(50,108,149), inset 0px 3px 5px black;
+    background-color: rgba(34, 49, 63, 0.7);
+    padding: 9px 10%;
+    display: inline-block;
+    width: 60%;
+
+}
+.btn:hover, .btn.focus, .btn:focus {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+.btn{
+    outline: none;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    box-shadow: 0px 4px #999;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4285;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 4px;
+}
+.btn:active {
+  box-shadow: 0 1px #666;
+  transform: translateY(3px);
+}
+
+.propoBtn {
+	
+	font-size:18pt;
+	font-weight:blod;
+	position: relative;
+	top:5px;
+}
+.decoColor {
+animation: flash 2s ease infinite,mojito 2s ease infinite!important;
+}
+@keyframes mojito {
+0% { color: #FF1919; }
+15% { color: #E019FF; }
+30% { color: #4F19FF; }
+45% { color: #19A7FF; }
+60% { color: #19FFDC; }
+75% { color: #65FF19; }
+90% { color: #FFE019; }
+}
+.penduDecoMilieu {
+    background: rgba(34, 49, 63, 0.7);
+    display: inline-block;
+    border: 2px solid rgb(34, 49, 63);
+    box-shadow: inset 0px 0px 0px 1px black, 0px 5px 10px rgba(0,0,0,0.4);
+    padding: 20px 0;
+    width: 60%;
+    margin-bottom:100px;
+}
+
+@media screen and (max-width: 800px) {
+  .penduDecoMilieu {
+    width: 98%;
+  }
+}
+@media screen and (max-width: 800px) {
+  h1 {
+    width: 98%;
+  }
+}
+@media (min-width: 768px) {
+  .disparuBr {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .disparuBr2 {
+    display: none;
+  }
+}
+@media (min-width: 800px) {
+  .partieRightPosi {
+    transform: translateY(-100%);
+    margin-top: 50%;
+  }
+}
+.btnLong{
+    width: 140px;
+}
+.stylePopUp {
+    padding: 10px;
+    position: absolute;
+    bottom: -45px;
+    right: -15px;
+}
+.modal-content {
+    background: rgba(34, 49, 63, 1);
+    border-bottom: 2px solid #286090;
+}
+.modal-header {
+    border-bottom: 2px solid #286090;
+}
+.form-control {
+    display: inline-block;
+    padding-left: 12px;
+    width: 50px;
+}

@@ -1,0 +1,220 @@
+
+html,body{ 
+    width:100%;
+    height:100%;
+    background: #9dd53a; 
+    background: #b4e391; 
+    background: -moz-linear-gradient(-45deg, #b4e391 0%, #61c419 50%, #b4e391 100%);
+    background: -webkit-linear-gradient(-45deg, #b4e391 0%,#61c419 50%,#b4e391 100%); 
+    background: linear-gradient(135deg, #b4e391 0%,#61c419 50%,#b4e391 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=1 ); 
+    margin:0px;
+}
+
+html{
+z-indexwebkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body{
+    font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+td img {
+	width:60px;
+	height:60px;
+}
+
+.joueur1 {
+    background: black;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+}
+
+.joueur2 {
+    background: white;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+}
+
+.pionNoir {
+    background: black;
+    border-radius: 50px;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+}
+
+.pionBlanc {
+    background: white;
+    border-radius: 50px;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+}
+
+/* ---- base ---- */
+#container {
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    background: rgba(0,0,0,0.7);
+    height: auto;
+    padding: 10px;
+    box-shadow: inset 0px 0px 0px 2px black, 0px 5px 10px rgba(0,0,0,0.4);
+}
+
+.title {
+    background: rgba(0,128,0,0.7);
+    width: 100%;
+    box-shadow: 0px 3px 0px green, inset 0px 3px 5px black;
+}
+
+.title h1 {
+    color:white;
+    text-shadow:1px 1px 0px black;
+    padding: 9px;
+}
+
+.block_content1 {
+    width: 500px;
+    float:left;
+}
+
+.block_content2 {
+    box-shadow: inset 0px 0px 0px 2px black, 0px 5px 10px rgba(0,0,0,0.4);
+    width: 250px;
+    float:right;
+    background: rgba(0,128,0,0.7);
+    padding: 9px;
+}
+
+.block_content2 table {
+    text-align: center;
+    width: 100%;
+    color: white;
+    text-shadow: 1px 1px 0px black;
+    font-size: 15pt;
+}
+
+.block_content2 p {
+    color: white;
+    text-shadow: 1px 1px 0px black;
+    font-size: 14px;
+}
+
+#block2 {
+    position:relative;
+    bottom: 10px;
+}
+
+#winner {
+    animation: importantprefix 2s ease infinite alternate;
+    font-weight:bold;
+}
+
+#copyright {
+    color:white;
+    text-shadow: 1px 1px 0px black;
+    text-align:right;
+}
+
+/* ---- extra ---- */
+.finContainer {
+    clear:both;
+}
+.spacer .mask::after {
+    content: "";
+    display: block;
+    margin: -20px auto 0;
+    width: 100%;
+    height: 25px;
+    border-radius: 125px / 12px;
+    box-shadow: 0px 0px 8px black;
+}
+.spacer .mask {
+    overflow: hidden;
+    height: 20px;
+}
+.spacer {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: #27ae60;
+    color: white;
+    text-shadow: 1px 1px 0px black;
+    border-radius: 4px;
+    padding:4px 12px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px #999;
+}
+.btn:hover {
+    background-color: darkgreen;
+}
+
+.btn:active {
+    box-shadow: 0 1px #666;
+    transform: translateY(3px);
+}
+
+#img2{
+    position: absolute;
+    top: 9px;
+    left: 9px;
+}
+#img3{
+    position: absolute;
+    top: 9px;
+    right: 9px;
+}
+#img4{
+    position: absolute;
+    bottom: 9px;
+    left: 9px;
+}
+#img5{
+    position: absolute;
+    bottom: 9px;
+    right: 9px;
+}
+
+@keyframes importantprefix {
+    0% { color: white; }
+    20% { color: red; }
+    40% { color: white; }
+    60% { color: red; }
+    80% { color: white; }
+    100% { color: red; }
+ }
+

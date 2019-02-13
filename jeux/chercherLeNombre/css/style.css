@@ -1,0 +1,114 @@
+html, body {
+    height: 100%;
+    margin: 0; padding: 0;
+}
+body {
+    display : table;
+    width: 100%;
+	background: rgb(32,32,32);
+	color: #c8c8c8;
+}
+footer {
+    display : table-row;
+	background: black;
+	border-top: 2px solid rgba(255,255,255,0.2);
+}
+body {position: relative;}
+footer {position: absolute; bottom: 0; left: 0; right: 0}
+
+.basDePageCss {
+    padding: 9px; 
+	color: white;
+}
+.basDePageCssL {
+	float:left;
+}
+.basDePageCssR {
+	float:right;
+}
+
+a { 
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgb(72, 132, 192);
+	text-decoration: none;
+}
+.divP {
+	margin-top: 30px;
+    background-color: rgb(44, 44, 44);
+    padding: 12px;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 5px black inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 5px black inset;
+    -khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 5px black inset;
+    box-shadow: 0px 1px 0px rgba(255,255,255,0.25), inset 0px 1px 5px black;
+	border-radius: 10px;
+	text-align: center;
+}
+.texteP {
+    padding: 12px;
+	text-align: center;
+}
+
+@keyframes importantprefix {
+0% { color: white; }
+20% { color: red; }
+40% { color: white; }
+60% { color: red; }
+80% { color: white; }
+100% { color: red; }
+ }
+ 
+.coulGag {
+	animation: importantprefix 2s ease infinite alternate; 
+	font-size: 16pt;
+	font-weight: bold;
+ }
+ .form-control {
+    display: inline-block;
+    padding-left: 12px;
+    width: 100px;
+}
+.btn:hover, .btn.focus, .btn:focus {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+.btn{
+	outline: none;
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #2e6da4;
+	box-shadow: 0px 4px #999;
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.4285;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border-radius: 4px;
+}
+.btn:active {
+  box-shadow: 0 1px #666;
+  transform: translateY(3px);
+}
+
+.propoBtn {
+	
+	font-size:18pt;
+	font-weight:blod;
+	position: relative;
+	top:5px;
+}

@@ -1,0 +1,6 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteOptions Inherit
+
+RewriteRule ^pendu$ index.php
+RewriteRule ^partie$ partie.php
