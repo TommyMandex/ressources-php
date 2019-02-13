@@ -1,12 +1,12 @@
 <center><br/><br/><?php
 $titre = 'Générateur de mot de passe';
 	$version = '1.0';
-	include('../entete.php');
-	
-	
-if (isset($_POST['bValider'])) 
+	include('inc/entete.php');
+
+
+if (isset($_POST['bValider']))
 {
-	
+
 	// Récupère les paramètres pour adapter selon les besoins de l'utilisateur
 	$SaisieNbrCaract = htmlspecialchars($_POST['nbrCaract']);
 	$SaisieTypePasswd = htmlspecialchars($_POST['typePasswd']);
@@ -21,7 +21,7 @@ if (isset($_POST['bValider']))
 		</FORM>
 		<?php
 		}
-		
+
 	else {
 		if ($SaisieTypePasswd == '1')
 		{
@@ -46,7 +46,7 @@ if (isset($_POST['bValider']))
 		// Puis une seconde boucle pour générer le mot de passe caractère par caractère jusqu'au nombre indiqué par l'utilisateur
 		echo 'Votre mot de passe est : <br/><p class="texteP"> ';
 		// Puis une seconde boucle pour générer le mot de passe caractère par caractère jusqu'au nombre indiqué par l'utilisateur
-		for($i = 1; $i <= $nb_caract; $i++) 
+		for($i = 1; $i <= $nb_caract; $i++)
 		{
 
 		// On compte le nombre de caractères
@@ -56,21 +56,21 @@ if (isset($_POST['bValider']))
 		$Nbr = mt_rand(0,($Nbr-1));
 
 		// Pour finir, on écrit le résultat :
-		
+
 		$resultat = $caract[$Nbr];
 		echo $resultat;
 		}
 		echo '</p>';
 		?>
-		
+
 		<FORM action="" method="POST">
 		<INPUT  class="button" type="submit" name="bRecommencer" value="Générer un nouveau mot de passe" />
 		</FORM>
 		<?php
-	}	
+	}
 }
 
-else 
+else
 {
 	?><form action='' method="POST">
 <table>
@@ -89,9 +89,9 @@ Type de mot de passe : </td><td>    <select name='typePasswd'>
 <br/>
 <INPUT type="submit" class="button" name="bValider" value="Générer votre mot de passe" />
 	</FORM><?php
-		
+
 }
-	include('../bas_de_page.php');
+	include('inc/bas_de_page.php');
 ?>
 </center>
 <style>
@@ -123,9 +123,9 @@ Type de mot de passe : </td><td>    <select name='typePasswd'>
 80% { color: white; }
 100% { color: red; }
  }
- 
+
 .coulGag {
-	animation: importantprefix 2s ease infinite alternate; 
+	animation: importantprefix 2s ease infinite alternate;
 	font-size: 25pt;
 	font-weight: bold;
  }
@@ -159,5 +159,3 @@ option:hover {
 	color: white;
 }
 </style>
- 
- 

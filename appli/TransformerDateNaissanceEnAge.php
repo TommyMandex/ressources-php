@@ -1,12 +1,12 @@
 <?php
 $titre = 'Transformer une date de naissance en âge';
-include('../entete.php');
+include('inc/entete.php');
 
 function DateAgeFR($DateNaissance)
 {
     $DateNaissance = explode("/", $DateNaissance);
     $Date = explode("/", date("d/m/Y"));
-	
+
     if (($DateNaissance[1] <= $Date[1]) && ($DateNaissance[0] <= $Date[0])) $Age = $Date[2] - $DateNaissance[2];
     else $Age = $Date[2] - $DateNaissance[2] - 1;
 
@@ -16,8 +16,8 @@ function DateAgeFR($DateNaissance)
 <center>
 <h2 id="texteA">Transformer une date de naissance en âge</h2>
 <?php
-if (isset($_POST['bValider'])) 
-{	
+if (isset($_POST['bValider']))
+{
 	$DateNaissance = htmlspecialchars($_POST['eDate']);
 	echo DateAgeFR($DateNaissance).' ans';
 }
@@ -44,5 +44,5 @@ if (isset($_POST['bValider']))
 </style>
 <?php
 $version = '1.0';
-include('../bas_de_page.php');
+include('inc/bas_de_page.php');
 ?>

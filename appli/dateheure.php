@@ -1,6 +1,6 @@
 <?php
 $titre = 'Date&Heure';
-include('../entete.php');
+include('inc/entete.php');
 ?>
 <center><p id="texteA">
 <?php
@@ -25,5 +25,5 @@ echo 'Nous sommes le ' .date('d/m/y'). ' et il est ' .date('H:i:s');
 </style>
 <?php
 $version = '1.0';
-include('../bas_de_page.php');
+include('inc/bas_de_page.php');
 ?>

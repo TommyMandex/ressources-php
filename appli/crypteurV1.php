@@ -1,6 +1,6 @@
 <center><?php
 $titre = 'Crypteur/Decrypteur';
-include('../entete.php');
+include('inc/entete.php');
 $version = '2.0';
 ?>
 <br/><br/>
@@ -8,7 +8,7 @@ $version = '2.0';
 
   <fieldset style="display: inline-block;">
     <legend>Clef</legend>
-      <h4>Clef de crytage ou de decryptage (ex: Huj*78Jusi) :</h4> 
+      <h4>Clef de crytage ou de decryptage (ex: Huj*78Jusi) :</h4>
       <INPUT type="text" name="eClefCrypt" required autofocus/>
   </fieldset>
   <br/><br/>
@@ -18,7 +18,7 @@ $version = '2.0';
 		<fieldset>
 		  <legend>Crypter</legend>
 			<center>
-			  <h4>Mot ou texte a crypter</h4> 
+			  <h4>Mot ou texte a crypter</h4>
 			  <INPUT type="text" name="eNumCrypt"/>
 			  <br/><br/>
 			  <INPUT type="submit" name="bCrypter" value="Crypter"/>
@@ -26,11 +26,11 @@ $version = '2.0';
 		</fieldset>
 	  </td>
 	  <td>
-	  
+
 		<fieldset>
 		  <legend>Decrypter</legend>
 		    <center>
-			  <h4>Mot ou texte a decrypter :</h4> 
+			  <h4>Mot ou texte a decrypter :</h4>
 			  <INPUT type="text" name="eNumDecrypt"/>
 			  <br/><br/>
 			  <INPUT type="submit" name="bDecrypter" value="Décrypter" />
@@ -39,7 +39,7 @@ $version = '2.0';
 	  </td>
 	</tr>
   </table>
- 
+
 </FORM>
 
 
@@ -49,7 +49,7 @@ $version = '2.0';
 if (isset($_POST['bCrypter'])) {
 	$maChaineACrypter = htmlspecialchars($_POST['eNumCrypt']);
 	$maCleDeCryptage = htmlspecialchars($_POST['eClefCrypt']);
-	
+
 	// —————————————–
 	// crypte une chaine (via une clé de cryptage)
 	// —————————————–
@@ -74,8 +74,8 @@ if (isset($_POST['bCrypter'])) {
 	}
 	return base64_encode($newstr);
 	}
-	
-	
+
+
 
 	$maChaineCrypter = crypter($maCleDeCryptage, $maChaineACrypter);
 
@@ -85,11 +85,11 @@ if (isset($_POST['bCrypter'])) {
 }
 
 if (isset($_POST['bDecrypter'])) {
-	
+
 	$maChaineCrypter = htmlentities($_POST['eNumDecrypt']);
 	$maCleDeCryptage = htmlspecialchars($_POST['eClefCrypt']);
-	
-	
+
+
 	// —————————————–
 	// décrypte une chaine (avec la même clé de cryptage)
 	// —————————————–
@@ -115,13 +115,13 @@ if (isset($_POST['bDecrypter'])) {
 	}
 	return $newstr;
 	}
-	
+
 	$maChaineDecrypter = decrypter($maCleDeCryptage, $maChaineCrypter);
 
 	echo "Chaine Crypter => <b>".$maChaineCrypter."</b><br/>";
 	echo "Clef de decryptage => <b>".$maCleDeCryptage."</b><br/>";
 	echo "Chaine Decrypter => <b>".$maChaineDecrypter."</b><br/>";
 }
-include('../bas_de_page.php');
+include('inc/bas_de_page.php');
 ?>
 </center>
