@@ -1,9 +1,10 @@
-﻿<?php 
-$pseudo = "LMoury.com"; //Mettre votre pseudo  
+﻿<?php
+$pseudo = "LMoury.com"; //Mettre votre pseudo
 $title = $pseudo." - Acceuil"; // Titre de la page ! (Vous pouvez retire le "$pseudo.")
-$dossierAppli = "appli"; // Mettre le nom du dossier ou vos site se trouve 
-$dossierJeux = "jeux"; // Mettre le nom du dossier ou vos site se trouve 
+$dossierAppli = "appli"; // Mettre le nom du dossier ou vos site se trouve
+$dossierJeux = "jeux"; // Mettre le nom du dossier ou vos site se trouve
 ?>
+
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -15,7 +16,7 @@ $dossierJeux = "jeux"; // Mettre le nom du dossier ou vos site se trouve
 		<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
 		<script src="assets/js/jquery-2.2.3.min.js"></script>
-		<script src="assets/js/bootstrap.js"></script>	
+		<script src="assets/js/bootstrap.js"></script>
 	</head>
 	<body class="fond">
 		<div class="container">
@@ -36,20 +37,20 @@ $dossierJeux = "jeux"; // Mettre le nom du dossier ou vos site se trouve
 					if($dossier = opendir($dossierAppli))	{
 						while(false !== ($fichier = readdir($dossier)))	{
 							if($fichier != '.' && $fichier != '..' && $fichier != 'index.php' && $fichier != '.DS_Store') {
-								$nb_fichier++; 
+								$nb_fichier++;
 								echo '
 								<div class="conteiner">
 								<ul class="list-group">
 								<a href="./'.$dossierAppli.'/'.$fichier.'" style="text-decoration:none"><li class="list-group-item">'.$fichier.'</li></a>
 								</ul>
 								</div>';
-							} 
+							}
 						}
 						echo '</ul><br />';
 						$avecousans = ($nb_fichier > 1) ? 'fichiers' : 'fichier';
 						echo '<p class="pied text-center">Il y a <strong>' .$nb_fichier.'</strong> ' .$avecousans.' dans le dossier </p>';
-						 
-						closedir($dossier); 
+
+						closedir($dossier);
 					}
 					else {
 						 echo 'Le dossier n\' a pas pu être ouvert';
@@ -62,27 +63,27 @@ $dossierJeux = "jeux"; // Mettre le nom du dossier ou vos site se trouve
 					if($dossier = opendir($dossierJeux))	{
 						while(false !== ($fichier = readdir($dossier)))	{
 							if($fichier != '.' && $fichier != '..' && $fichier != 'index.php' && $fichier != '.DS_Store') {
-								$nb_fichier++; 
+								$nb_fichier++;
 								echo '
 								<div class="conteiner">
 								<ul class="list-group">
 								<a href="./'.$dossierJeux.'/'.$fichier.'" style="text-decoration:none"><li class="list-group-item">'.$fichier.'</li></a>
 								</ul>
 								</div>';
-							} 
+							}
 						}
 						echo '</ul><br />';
 						$avecousans = ($nb_fichier > 1) ? 'fichiers' : 'fichier';
 						echo '<p class="pied text-center">Il y a <strong>' .$nb_fichier.'</strong> ' .$avecousans.' dans le dossier </p>';
-						 
-						closedir($dossier); 
+
+						closedir($dossier);
 					}
 					else {
 						 echo 'Le dossier n\' a pas pu être ouvert';
 					}
 					?>
 				</div>
-			</div>				
+			</div>
 		</div>
 		<footer>
 			<span class="basDePageCss" style="float:left;">
